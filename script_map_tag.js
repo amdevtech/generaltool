@@ -68,11 +68,20 @@ function injectLeafletAndReturnPromise() {
     #amdev-map { flex:1; min-height:200px; position:relative; }
     .amdev-footer { display:flex; gap:8px; padding:10px; justify-content:flex-end; background:#fafafa; border-top:1px solid #eee; }
     .amdev-btn-secondary { padding:8px 12px; border-radius:6px; border:0; cursor:pointer; background:#e6f0ff; color:#064a9b; }
-    .amdev-search-input { position:absolute; left:10px; top:10px; width:60%; z-index:520; padding:8px; border-radius:6px; border:1px solid rgba(0,0,0,0.2); background:white; }
-    .amdev-results { position:absolute; left:10px; top:46px; z-index:520; background:white; max-height:200px; overflow:auto; width:60%; border-radius:6px; box-shadow:0 4px 12px rgba(0,0,0,0.12); }
+    .amdev-search-input { position:absolute; right:10px; top:10px; width:60%; z-index:520; padding:8px; border-radius:6px; border:1px solid rgba(0,0,0,0.2); background:white; }
+    .amdev-results { position:absolute; right:10px; top:46px; z-index:520; background:white; max-height:200px; overflow:auto; width:60%; border-radius:6px; box-shadow:0 4px 12px rgba(0,0,0,0.12); }
     .amdev-result-item { padding:8px; cursor:pointer; border-bottom:1px solid #eee; font-size:14px; }
     .amdev-result-item:hover { background:#f3f7ff; }
     @media (max-width:600px) { .amdev-search-input, .amdev-results { width:88%; left:6%; } }
+    .amdev-tag-wrap { display:flex; gap:8px; align-items:center; padding:8px; border:1px solid #ddd; border-radius:6px; min-width:280px; flex-wrap:wrap; background:#fff; }
+    .amdev-tags-list { display:flex; gap:6px; align-items:center; flex-wrap:wrap; }
+    .amdev-tag { background:#e6f0ff; color:#064a9b; padding:6px 8px; border-radius:999px; display:inline-flex; gap:8px; align-items:center; font-size:13px; }
+    .amdev-tag button { background:transparent; border:0; cursor:pointer; color:#064a9b; font-weight:700; padding:0 4px; }
+    .amdev-tag-input { min-width:80px; border:0; outline:none; padding:6px 4px; font-size:14px; background:transparent; }
+    .amdev-tag-clear { margin-left:8px; padding:6px 8px; border-radius:6px; border:0; cursor:pointer; background:#f44336; color:#fff; font-weight:600; }
+    @media (max-width:600px) {
+      .amdev-tag-wrap { width:88%; }
+    }
   `;
   const s = document.createElement('style');
   s.appendChild(document.createTextNode(css));
