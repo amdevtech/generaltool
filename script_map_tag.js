@@ -288,7 +288,7 @@ function registerMapInputs(configs) {
         const btn = document.createElement('button');
         btn.type = 'button';
         btn.className = 'amdev-pick-btn';
-        btn.textContent = 'فتح الخريطة';
+        btn.textContent = 'الخريطة';
         btn.addEventListener('click', () => openMapModalForInput(node));
         wrapper.appendChild(btn);
       });
